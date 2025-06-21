@@ -7,11 +7,20 @@ using TMPro;
 public class ChangeBtnTxt : MonoBehaviour
 {
     public TextMeshProUGUI[] newFile_BtnTxts;
+
+	// 버튼 내용 바꾸기
     public void Update_BtnTxt()
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			newFile_BtnTxts[i].text = QuestDataManager.questData[PlayerPrefs.GetInt("questNum" + i, 0)];
+			if (PlayerPrefs.GetInt("questNum" + i, 0) == 0)
+			{
+				newFile_BtnTxts[i].text = QuestDataManager.questData[PlayerPrefs.GetInt("questNum" + i, 0)];
+			}
+			else if (PlayerPrefs.GetInt("questNum" + i, 0) > 0)
+			{
+				newFile_BtnTxts[i].text = PlayerPrefs.GetInt("questNum" + i, 0).ToString() + ". " + QuestDataManager.questData[PlayerPrefs.GetInt("questNum" + i, 0)];
+			}
 		}
 	}
 }

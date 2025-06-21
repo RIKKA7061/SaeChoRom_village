@@ -206,7 +206,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 304136261}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897705427}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: SettingPopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &304136261
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1038,6 +1050,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   newGamePopupPrefab: {fileID: 5912648523456567713, guid: cefd7205672147e4f96dd7500a1d8afe, type: 3}
   YesNoPopupPrefab: {fileID: 5606480590390051636, guid: 485906c2d21ceae4184ec44df6a82e9f, type: 3}
+  SingleWindowPrefab: {fileID: 2152669105507539974, guid: e7d5f54fc3e448c4b9619739d8bf4f63, type: 3}
   popupParent: {fileID: 1297707664}
 --- !u!1 &1940568763
 GameObject:
@@ -1122,7 +1135,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1940568766}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1897705427}
+        m_TargetAssemblyTypeName: PopupManager, Assembly-CSharp
+        m_MethodName: DevPopUp
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1940568766
 MonoBehaviour:
   m_ObjectHideFlags: 0

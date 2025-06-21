@@ -8,12 +8,14 @@ public class NewFileButton : MonoBehaviour
 	public int btnIndex; // 0 1 2
     public Button btn;
     public TextMeshProUGUI btnTxt;
+	private ChangeBtnTxt changeBtnTxt;
 
 	void Start()
 	{
 		int currentSavedQuest = PlayerPrefs.GetInt("questNum" + btnIndex, 0);
-		//Debug.Log($"{btnIndex}버튼 : {currentSavedQuest}진행도");
-		btnTxt.text = QuestDataManager.questData[currentSavedQuest];
+		changeBtnTxt = FindObjectOfType<ChangeBtnTxt>();
+		// 버튼에 저장된 내용 채우기
+		changeBtnTxt.Update_BtnTxt();
 		btn.onClick.AddListener(ChangeBtnTxt);
 	}
 
@@ -41,7 +43,8 @@ public class NewFileButton : MonoBehaviour
 		int newQuest = PlayerPrefs.GetInt("questNum" + btnIndex);
 		if (QuestDataManager.questData.ContainsKey(newQuest))
 		{
-			btnTxt.text = QuestDataManager.questData[newQuest];
+			// 버튼 내용 업뎃
+			changeBtnTxt.Update_BtnTxt();
 		}
 		else
 		{
@@ -56,7 +59,8 @@ public class NewFileButton : MonoBehaviour
 			int newQuest = PlayerPrefs.GetInt("questNum" + i, 0);
 			if (QuestDataManager.questData.ContainsKey(newQuest))
 			{
-				btnTxt.text = QuestDataManager.questData[newQuest];
+				// 버튼 내용 업뎃
+				changeBtnTxt.Update_BtnTxt();
 			}
 			else
 			{
