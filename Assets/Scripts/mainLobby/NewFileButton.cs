@@ -5,45 +5,46 @@ using UnityEngine.SceneManagement;
 
 public class NewFileButton : MonoBehaviour
 {
-	public int btnIndex; // 0 1 2
+	public int slot; // 0 1 2
     public Button btn;
     public TextMeshProUGUI btnTxt;
 	private ChangeBtnTxt changeBtnTxt;
+	private SaveManager saveManager;
+	public SaveData saveData;
 
 	void Start()
 	{
-		int currentSavedQuest = PlayerPrefs.GetInt("questNum" + btnIndex, 0);
 		changeBtnTxt = FindObjectOfType<ChangeBtnTxt>();
-		// 버튼에 저장된 내용 채우기
+		saveManager = FindObjectOfType<SaveManager>();
+
+		saveData = saveManager.LoadGame();
+		int questNum = saveData.slots[slot].currentMapIndex;
+
 		changeBtnTxt.Update_BtnTxt();
-		btn.onClick.AddListener(ChangeBtnTxt);
+
+		btn.onClick.AddListener(OnClick_NewFileBtn);
 	}
 
-	public void ChangeBtnTxt()
+	public void OnClick_NewFileBtn()
 	{
-		int questNum = PlayerPrefs.GetInt("questNum" + btnIndex, 0);
-
-		// 저장된 퀘스트 지역부터 게임 시작하기
-		if (PlayerPrefs.GetInt("questNum" + btnIndex) > 0)
+		saveData = saveManager.LoadGame();
+		int currentMapIndex = saveData.slots[slot].currentMapIndex;
+		if (currentMapIndex > 0)
 		{
-			//Debug.Log($"진행도:{PlayerPrefs.GetInt("questNum" + btnIndex, 0)}, {btnIndex}번째 파일");
-
-			PlayerPrefs.SetInt("CurrentSlot", btnIndex);
-			PlayerPrefs.Save();
-
-			SceneManager.LoadScene("inGame"); // 인게임 돌입
+			string SceneName = MapDataManager.MapSceneName[currentMapIndex];
+			SceneManager.LoadScene(SceneName); // ex. 01-ShipLand
 		}
-
-		// 새 파일 만들기 선택시
-		if (questNum == 0)
+		else if (currentMapIndex == 0)
 		{
-			PlayerPrefs.SetInt("questNum" + btnIndex, 1); // 진행도 1 처리
+			saveData.slots[slot].currentMapIndex = 1;
+			saveManager.SaveGame(saveData);
 		}
+		currentMapIndex = saveData.slots[slot].currentMapIndex;
+		Debug.Log($"슬롯 {slot}, 현재 맵 번호{currentMapIndex} ");
 
-		int newQuest = PlayerPrefs.GetInt("questNum" + btnIndex);
-		if (QuestDataManager.questData.ContainsKey(newQuest))
+		// 버튼 내용 업뎃
+		if (QuestDataManager.questData.ContainsKey(currentMapIndex))
 		{
-			// 버튼 내용 업뎃
 			changeBtnTxt.Update_BtnTxt();
 		}
 		else
@@ -56,8 +57,11 @@ public class NewFileButton : MonoBehaviour
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			int newQuest = PlayerPrefs.GetInt("questNum" + i, 0);
-			if (QuestDataManager.questData.ContainsKey(newQuest))
+			saveManager.ResetGame(slot);
+			saveManager.SaveGame(saveData);
+			int questNum = saveData.slots[slot].currentMapIndex;
+			Debug.Log(questNum);
+			if (QuestDataManager.questData.ContainsKey(questNum))
 			{
 				// 버튼 내용 업뎃
 				changeBtnTxt.Update_BtnTxt();

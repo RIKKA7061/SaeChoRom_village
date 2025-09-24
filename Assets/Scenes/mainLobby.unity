@@ -637,6 +637,65 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
   m_PrefabInstance: {fileID: 4940124440303429477}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &988334102
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 988334104}
+  - component: {fileID: 988334103}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &988334103
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988334102}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f8cf741662adec4bb9f28859d31abf1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  saveData:
+    slots:
+    - currentMapIndex: 0
+      unlockedMapCount: 0
+      unlockedClues: 
+      unlockedStatements: 
+    - currentMapIndex: 0
+      unlockedMapCount: 0
+      unlockedClues: 
+      unlockedStatements: 
+    - currentMapIndex: 0
+      unlockedMapCount: 0
+      unlockedClues: 
+      unlockedStatements: 
+  slot: 0
+--- !u!4 &988334104
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 988334102}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 960, y: 540, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1251602135
 GameObject:
   m_ObjectHideFlags: 0
@@ -1051,7 +1110,7 @@ MonoBehaviour:
   newGamePopupPrefab: {fileID: 5912648523456567713, guid: cefd7205672147e4f96dd7500a1d8afe, type: 3}
   YesNoPopupPrefab: {fileID: 5606480590390051636, guid: 485906c2d21ceae4184ec44df6a82e9f, type: 3}
   SingleWindowPrefab: {fileID: 2152669105507539974, guid: e7d5f54fc3e448c4b9619739d8bf4f63, type: 3}
-  popupParent: {fileID: 1297707664}
+  Pannel: {fileID: 1297707664}
 --- !u!1 &1940568763
 GameObject:
   m_ObjectHideFlags: 0

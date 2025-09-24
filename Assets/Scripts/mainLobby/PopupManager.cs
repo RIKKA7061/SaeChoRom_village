@@ -6,14 +6,10 @@ public class PopupManager : MonoBehaviour
 	public GameObject newGamePopupPrefab;
 	public GameObject YesNoPopupPrefab;
 	public GameObject SingleWindowPrefab;
-	public Transform popupParent;
+	public Transform Pannel;
 
 	private Dictionary<string, GameObject> popupDict = new Dictionary<string, GameObject>();
 	private SingleWindowManager singleWindowManager;
-
-	private void Start()
-	{
-	}
 
 	// 새 파일 만들기 창
 	public void OnGameStart()
@@ -53,7 +49,7 @@ public class PopupManager : MonoBehaviour
 		}
 		else
 		{
-			GameObject popup = Instantiate(prefab, popupParent);
+			GameObject popup = Instantiate(prefab, Pannel);
 			popupDict[key] = popup;
 		}
 	}

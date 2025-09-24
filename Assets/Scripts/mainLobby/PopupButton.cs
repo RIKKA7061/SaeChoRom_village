@@ -17,7 +17,7 @@ public class PopupButton : MonoBehaviour
 	// ¿¹
 	void OnYesClicked()
 	{
-		delFileButton.DelBtn(BtnIndexManager.btnIndex);
+		delFileButton.DelBtn(BtnIndexManager.slot);
 	}
 
 }
