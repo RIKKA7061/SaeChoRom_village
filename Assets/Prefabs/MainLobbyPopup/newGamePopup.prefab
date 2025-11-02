@@ -98,21 +98,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
   newFile_BtnTxts:
   - {fileID: 3291590118080170329}
   - {fileID: 6797533257517160017}
@@ -127,6 +115,10 @@ PrefabInstance:
     - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Name
       value: newFileBtn1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Pivot.x
@@ -267,21 +259,9 @@ MonoBehaviour:
   btnTxt: {fileID: 6797533257517160017}
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
 --- !u!1001 &2395691877820370413
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -292,6 +272,10 @@ PrefabInstance:
     - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Name
       value: delFileBtn2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Pivot.x
@@ -421,21 +405,9 @@ MonoBehaviour:
   newFileBtnTxt: {fileID: 1002362409826489796}
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
 --- !u!1001 &3258959030825060661
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -446,6 +418,10 @@ PrefabInstance:
     - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Name
       value: delFileBtn1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Pivot.x
@@ -559,21 +535,9 @@ MonoBehaviour:
   newFileBtnTxt: {fileID: 6797533257517160017}
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
 --- !u!224 &7616991019706391272 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
@@ -600,6 +564,10 @@ PrefabInstance:
     - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Name
       value: newFileBtn2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4940124440044344274, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
       propertyPath: m_Pivot.x
@@ -740,21 +708,9 @@ MonoBehaviour:
   btnTxt: {fileID: 1002362409826489796}
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
 --- !u!1001 &7575277520351810997
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -889,21 +845,9 @@ MonoBehaviour:
   btnTxt: {fileID: 3291590118080170329}
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
 --- !u!224 &3291590118519064168 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 4940124440044344285, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}
@@ -1177,21 +1121,9 @@ MonoBehaviour:
   newFileBtnTxt: {fileID: 3291590118080170329}
   saveData:
     slots:
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
-    - currentMapIndex: 0
-      unlockedMapCount: 0
-      unlockedClues: 00000000000000000000
-      susMeetCount: 
-      unlockedEvidence: 00000000000000000000
+    - nowQuestNum: 0
+    - nowQuestNum: 0
+    - nowQuestNum: 0
 --- !u!114 &4109255186108526408 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4940124440044344284, guid: 7dd6154c11cf85f47aa9d861f8d607fd, type: 3}

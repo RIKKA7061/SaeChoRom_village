@@ -10,20 +10,17 @@ public class SaveManager : MonoBehaviour
 
     void Awake()
     {
-		if (Instance == null)
-		{
-            Instance = this;
-            DontDestroyOnLoad(gameObject);
-		}
+        Instance = this;
+        DontDestroyOnLoad(gameObject);
 
         saveData = LoadGame();
     }
 
-    public void SaveGame(SaveData saveData)
+    public static void SaveGame(SaveData saveData)
     {
         if (saveData == null || saveData.slots == null || saveData.slots[0] == null)
         {
-            ResetGame(slot);
+            ResetGame(Instance.slot);
             if (saveData == null || saveData.slots == null || saveData.slots[0] == null) return;
         }
 
@@ -35,6 +32,8 @@ public class SaveManager : MonoBehaviour
         try
         {
             File.WriteAllText(filePath, json);
+            Debug.Log(filePath);
+            Debug.Log(json);
         }
         catch (System.Exception e)
         {
@@ -42,7 +41,7 @@ public class SaveManager : MonoBehaviour
         }
     }
 
-    public SaveData LoadGame()
+    public static SaveData LoadGame()
     {
         // 저장된 경로에서 json파일 가져오기
         string filePath = Path.Combine(Application.persistentDataPath, "save.json");
@@ -61,49 +60,46 @@ public class SaveManager : MonoBehaviour
                 // 값이 비어있지 않다면
                 if (loadedData != null)
                 {
-                    saveData = loadedData; // 값을 복사
+                    Instance.saveData = loadedData; // 값을 복사
                     //Debug.Log("게임 불러오기 성공!");
 
                     // 값이 비어있지 않을시
-                    if (saveData.slots.Length > 0 && saveData.slots[0] != null)
+                    if (Instance.saveData.slots.Length > 0 && Instance.saveData.slots[0] != null)
                     {
-                        return saveData;
+                        return Instance.saveData;
                     }
                     else
                     {
                         Debug.LogWarning("불러온 SaveData 객체 또는 슬롯이 비어 있거나 손상되었습니다. 초기화합니다.");
-                        ResetGame(slot);
-                        return saveData;
+                        ResetGame(Instance.slot);
+                        return Instance.saveData;
                     }
                 }
                 else
                 {
                     Debug.LogWarning("JSON을 SaveData 객체로 역직렬화하는 데 실패했습니다. 데이터가 손상되었을 수 있습니다. 초기화합니다.");
-                    ResetGame(slot);
-                    return saveData;
+                    ResetGame(Instance.slot);
+                    return Instance.saveData;
                 }
             }
             catch (System.Exception e)
             {
                 Debug.LogError($"게임 불러오기 실패 (역직렬화 오류): {e.Message}. 데이터를 초기화합니다.");
-                ResetGame(slot);
-                return saveData;
+                ResetGame(Instance.slot);
+                return Instance.saveData;
             }
         }
         else
         {
             Debug.LogWarning("저장된 파일이 없습니다. 새로운 게임 데이터를 초기화합니다.");
-            ResetGame(slot);
-            return saveData;
+            ResetGame(Instance.slot);
+            return Instance.saveData;
         }
     }
 
-    public void ResetGame(int slot)
+    public static void ResetGame(int slot)
     {
-        saveData.slots[slot].currentMapIndex = 0;
-        saveData.slots[slot].unlockedMapCount = 0;
-        saveData.slots[slot].unlockedClues = new bool[10];
-        saveData.slots[slot].unlockedEvidence = new bool[10];
-        SaveGame(saveData);
+        Instance.saveData.slots[slot].sceneNum = 0;
+        SaveGame(Instance.saveData);
     }
 }

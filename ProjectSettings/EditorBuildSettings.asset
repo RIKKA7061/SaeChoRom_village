@@ -6,12 +6,45 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/mainLobby.unity
+    path: Assets/Scenes/Ingame/maimLobby/mainLobby.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Map.unity
-    guid: b4dd1f3c0b34cdc46bb7528747a056ec
-  - enabled: 1
-    path: Assets/Scenes/Ingame/01-ShipLand.unity
+    path: Assets/Scenes/Ingame/prologueAccidents/001-prologueAccident.unity
     guid: 8e9ee6810fe180c47871b0ceedb51774
+  - enabled: 1
+    path: Assets/Scenes/Ingame/prologueAccidents/002-prologueAccident.unity
+    guid: fefe545b7dcddfb47aad7ce9649ba513
+  - enabled: 1
+    path: Assets/Scenes/Ingame/prologueAccidents/003-prologueAccident.unity
+    guid: 5d684e205956d424fafa0aee116c05c0
+  - enabled: 1
+    path: Assets/Scenes/Ingame/prologueAccidents/004-prologueAccident.unity
+    guid: f270032819996b44abca7e00b060b43e
+  - enabled: 1
+    path: Assets/Scenes/Ingame/prologueAccidents/005-prologueAccident.unity
+    guid: 48bf7753a233f0a4db421ae5e4388efe
+  - enabled: 1
+    path: Assets/Scenes/Ingame/prologueAccidents/006-prologueAccident.unity
+    guid: da4c484e803f6674fa44e5e4563ba1db
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/007-ch01.unity
+    guid: 6315886638cf32a4f810debaaba5faf8
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/008-ch01.unity
+    guid: 3a325e1faab26c044bcd28b33a6b99eb
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/009-ch01.unity
+    guid: 159b4a54fe4ebd541a0b1b6fece8a668
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/010-ch01.unity
+    guid: 4ab66c8c409dce54faaa11428e933bf0
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/011-ch01.unity
+    guid: e48627d8ea137cf4e9a5eef1e2442f16
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/012-ch01.unity
+    guid: 96f0d281f00e90742a4cedfc8b50fb90
+  - enabled: 1
+    path: Assets/Scenes/Ingame/SevenShadow-ch01/013-ch01.unity
+    guid: 90fbce0ea01a47d4a8412cec8bbd668a
   m_configObjects: {}

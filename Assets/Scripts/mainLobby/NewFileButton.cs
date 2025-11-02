@@ -17,8 +17,8 @@ public class NewFileButton : MonoBehaviour
 		changeBtnTxt = FindObjectOfType<ChangeBtnTxt>();
 		saveManager = FindObjectOfType<SaveManager>();
 
-		saveData = saveManager.LoadGame();
-		int questNum = saveData.slots[slot].currentMapIndex;
+		saveData = SaveManager.LoadGame();
+		int questNum = saveData.slots[slot].sceneNum;
 
 		changeBtnTxt.Update_BtnTxt();
 
@@ -27,8 +27,8 @@ public class NewFileButton : MonoBehaviour
 
 	public void OnClick_NewFileBtn()
 	{
-		saveData = saveManager.LoadGame();
-		int currentMapIndex = saveData.slots[slot].currentMapIndex;
+		saveData = SaveManager.LoadGame();
+		int currentMapIndex = saveData.slots[slot].sceneNum;
 		if (currentMapIndex > 0)
 		{
 			string SceneName = MapDataManager.MapSceneName[currentMapIndex];
@@ -36,10 +36,10 @@ public class NewFileButton : MonoBehaviour
 		}
 		else if (currentMapIndex == 0)
 		{
-			saveData.slots[slot].currentMapIndex = 1;
-			saveManager.SaveGame(saveData);
+			saveData.slots[slot].sceneNum = 1;
+			SaveManager.SaveGame(saveData);
 		}
-		currentMapIndex = saveData.slots[slot].currentMapIndex;
+		currentMapIndex = saveData.slots[slot].sceneNum;
 		Debug.Log($"½½·Ô {slot}, ÇöÀç ¸Ê ¹øÈ£{currentMapIndex} ");
 
 		// ¹öÆ° ³»¿ë ¾÷µ«
@@ -57,9 +57,9 @@ public class NewFileButton : MonoBehaviour
 	{
 		for (int i = 0; i < 3; i++)
 		{
-			saveManager.ResetGame(slot);
-			saveManager.SaveGame(saveData);
-			int questNum = saveData.slots[slot].currentMapIndex;
+			SaveManager.ResetGame(slot);
+			SaveManager.SaveGame(saveData);
+			int questNum = saveData.slots[slot].sceneNum;
 			Debug.Log(questNum);
 			if (QuestDataManager.questData.ContainsKey(questNum))
 			{

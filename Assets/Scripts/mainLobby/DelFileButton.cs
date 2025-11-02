@@ -9,7 +9,6 @@ public class DelFileButton : MonoBehaviour
 	public TextMeshProUGUI newFileBtnTxt;
 	private PopupManager popupManager;
 	private ChangeBtnTxt changeBtnTxt;
-	private SaveManager saveManager;
 
 	public SaveData saveData;
 
@@ -17,7 +16,6 @@ public class DelFileButton : MonoBehaviour
 	{
 		popupManager = FindObjectOfType<PopupManager>();
 		changeBtnTxt = FindObjectOfType<ChangeBtnTxt>();
-		saveManager = FindObjectOfType<SaveManager>();
 		delBtn.onClick.AddListener(YesNoPopup);
 	}
 	private void YesNoPopup()
@@ -29,8 +27,8 @@ public class DelFileButton : MonoBehaviour
 	// ¿¹
 	public void DelBtn(int slot)
 	{
-		saveManager.ResetGame(slot);
-		saveData = saveManager.LoadGame();
+		SaveManager.ResetGame(slot);
+		saveData = SaveManager.LoadGame();
 		changeBtnTxt.Update_BtnTxt();
 	}
 }
