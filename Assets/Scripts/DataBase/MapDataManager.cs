@@ -20,6 +20,7 @@ public class MapDataManager : MonoBehaviour
 		{ 10, "010-ch01" },
 		{ 11, "011-ch01" },
 		{ 12, "012-ch01" },
-		{ 13, "013-ch01" }
+		{ 13, "013-ch01" },
+		{ 14, "014-ch02" },
 	};
 }

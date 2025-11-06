@@ -47,4 +47,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ingame/SevenShadow-ch01/013-ch01.unity
     guid: 90fbce0ea01a47d4a8412cec8bbd668a
+  - enabled: 1
+    path: Assets/Scenes/Ingame/t_puzzleAndClue-ch02/014-ch02.unity
+    guid: ad2b8ad73760f4540b7baa4b37ecc122
   m_configObjects: {}
